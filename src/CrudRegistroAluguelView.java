@@ -20,11 +20,14 @@ public class CrudRegistroAluguelView {
         System.out.println("Digite nome da pessoa: ");
         String pessoa = entrada.next();
         Pessoa p = new Pessoa();
+        p.setNome(pessoa);
         System.out.println("Digite o veiculo: ");
         String veiculo = entrada.next();
+        Veiculo v = new Veiculo();
+        v.setDescricao(veiculo);
 
-       //RegistroAluguel r1 = new RegistroAluguel(id,c,valor,qtd,tipo,pessoa,veiculo);
-       // bancoDao.adicionar(r1);
+       RegistroAluguel r1 = new RegistroAluguel(id,c,valor,qtd,tipo,p,v);
+       bancoDao.adicionar(r1);
 
     }
 
@@ -57,13 +60,16 @@ public class CrudRegistroAluguelView {
         System.out.println("Digite o valor do tipo de veiculo: ");
         double tipo = entrada.nextDouble();
         System.out.println("Digite nome da pessoa: ");
-        Pessoa pessoa = new Pessoa();
+        String pessoa = entrada.next();
+        Pessoa p = new Pessoa();
+        p.setNome(pessoa);
         System.out.println("Digite o veiculo: ");
-        Veiculo veiculo = new Veiculo();
+        String veiculo = entrada.next();
+        Veiculo v = new Veiculo();
+        v.setDescricao(veiculo);
 
-        RegistroAluguel r1 = new RegistroAluguel(id,c,valor,qtd,tipo,pessoa,veiculo);
+        RegistroAluguel r1 = new RegistroAluguel(id,c,valor,qtd,tipo,p,v);
         bancoDao.alterar(r1);
-
 
     }
 }

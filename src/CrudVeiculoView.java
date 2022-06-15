@@ -15,6 +15,7 @@ public class CrudVeiculoView {
         int ano= entrada.nextInt();
         System.out.println("Digite o status: ");
         String status = entrada.next();
+
         Veiculo v1 = new Veiculo(id,ano,nome,status);
         bancoDao.adicionar(v1);
     }
@@ -37,7 +38,7 @@ public class CrudVeiculoView {
         String descricao = entrada.next();
         System.out.println("Digite o status: ");
         String status = entrada.next();
-       Veiculo v1 = new Veiculo(id,ano,descricao,status);
+        Veiculo v1 = new Veiculo(id,ano,descricao,status);
         bancoDao.alterar(v1);
 
     }

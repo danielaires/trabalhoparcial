@@ -112,6 +112,20 @@ public class RegistroAluguel {
         return Objects.hash(id);
     }
 
+
+    @Override
+    public String toString() {
+        return "RegistroAluguel{" +
+                "id=" + id +
+                ", dataLocacao=" + dataLocacao +
+                ", valorHora=" + valorHora +
+                ", qtdTempo=" + qtdTempo +
+                ", valorTipo=" + valorTipo +
+                ", pessoa=" + pessoa +
+                ", veiculo=" + veiculo +
+                '}';
+    }
+
     public double calcularAluguel() {
         descobrirtipo();
         return valorHora * qtdTempo * valorTipo;

@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class Menu {
     public static int menu() {
-
         Scanner sc = new Scanner(System.in);
         int opc;
         System.out.println("\n*******************************************");
@@ -18,5 +19,5 @@ public class Menu {
         return opc;
     }
 
-}
+}//CLASS
 

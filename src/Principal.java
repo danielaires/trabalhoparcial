@@ -8,83 +8,83 @@ public class Principal {
        BancoDao bancoDao =  new BancoDao(banco);
        AuxID auxID = new AuxID();
 
-        int opc = Menu.menu();
+        int opcao = Menu.menu();
 
-        int op = Menu.menu();
+        //int op = Menu.menu();
         do {
 
-            switch(op){
+//            switch(op){
+//                case 1:
+//                    CrudPessoaView.adicionar(bancoDao,auxID);
+//                    op = Menu.menu();
+//                    CrudPessoaView.atualizar(bancoDao);
+//                    op = Menu.menu();
+//                    CrudPessoaView.remover(bancoDao);
+//                    op = Menu.menu();
+//                    CrudPessoaView.listar(bancoDao);
+//                    op = Menu.menu();
+//                    break;
+//                case 2:
+//                    CrudVeiculoView.adicionar(bancoDao,auxID);
+//                    op= Menu.menu();
+//                    CrudVeiculoView.atualizar(bancoDao);
+//                    op = Menu.menu();
+//                    CrudVeiculoView.remover(bancoDao);
+//                    op = Menu.menu();
+//                    CrudVeiculoView.listar(bancoDao);
+//                    op = Menu.menu();
+//                    break;
+//                case 3:
+//                    CrudRegistroAluguelView.adicionar(bancoDao,auxID);
+//                    op = Menu.menu();
+//                    CrudRegistroAluguelView.atualizar(bancoDao,auxID);
+//                    op = Menu.menu();
+//                    CrudRegistroAluguelView.remover(bancoDao);
+//                    op = Menu.menu();
+//                    CrudRegistroAluguelView.listar(bancoDao);
+//                    break;
+//
+//            }
+
+            switch (opcao) {
+
+
                 case 1:
+
                     CrudPessoaView.adicionar(bancoDao,auxID);
-                    op = Menu.menu();
-                    CrudPessoaView.atualizar(bancoDao);
-                    op = Menu.menu();
-                    CrudPessoaView.remover(bancoDao);
-                    op = Menu.menu();
-                    CrudPessoaView.listar(bancoDao);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
+                    CrudVeiculoView.adicionar(bancoDao,auxID);
+                    opcao= Menu.menu();
+                    CrudRegistroAluguelView.adicionar(bancoDao,auxID);
+                    opcao = Menu.menu();
                     break;
                 case 2:
-                    CrudVeiculoView.adicionar(bancoDao,auxID);
-                    op= Menu.menu();
-                    CrudVeiculoView.atualizar(bancoDao);
-                    op = Menu.menu();
-                    CrudVeiculoView.remover(bancoDao);
-                    opc = Menu.menu();
-                    CrudVeiculoView.listar(bancoDao);
-                    opc = Menu.menu();
-                    break;
-                case 3:
-                    CrudRegistroAluguelView.adicionar(bancoDao,auxID);
-                    op = Menu.menu();
-                    CrudRegistroAluguelView.atualizar(bancoDao,auxID);
-                    op = Menu.menu();
-                    CrudRegistroAluguelView.remover(bancoDao);
-                    op = Menu.menu();
-                    CrudRegistroAluguelView.listar(bancoDao);
-                    break;
-
-            }
-
-            switch (opc) {
-
-
-                case 1:
-
-                    CrudPessoaView.adicionar(bancoDao,auxID);
-                    opc = Menu.menu();
-                    CrudVeiculoView.adicionar(bancoDao,auxID);
-                    opc= Menu.menu();
-                    CrudRegistroAluguelView.adicionar(bancoDao,auxID);
-                    opc = Menu.menu();
-                    break;
-                case 2:
                     CrudPessoaView.atualizar(bancoDao);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
                     CrudVeiculoView.atualizar(bancoDao);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
                     CrudRegistroAluguelView.atualizar(bancoDao,auxID);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
                     break;
                 case 3:
                    // System.out.println("Digite o código da pessoa:\t");
                     CrudPessoaView.remover(bancoDao);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
                     CrudVeiculoView.remover(bancoDao);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
                     CrudRegistroAluguelView.remover(bancoDao);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
                     break;
                 case 4:
                     CrudPessoaView.listar(bancoDao);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
                     CrudVeiculoView.listar(bancoDao);
-                    opc = Menu.menu();
+                    opcao = Menu.menu();
                     CrudRegistroAluguelView.listar(bancoDao);
                     break;
 
             }
-        } while (opc != 5);
+        } while (opcao != 5);
 
     }
 }

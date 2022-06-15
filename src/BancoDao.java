@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class BancoDao {
     private static List banco;
@@ -98,7 +99,6 @@ public class BancoDao {
             }
         }
     }//method
-
 
     static List listar() {
         Object o = null;
