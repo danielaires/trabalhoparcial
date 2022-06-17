@@ -16,6 +16,7 @@ public class CrudVeiculoView {
         System.out.println("Digite o status: ");
         String status = entrada.next();
 
+
         Veiculo v1 = new Veiculo(id,ano,nome,status);
         bancoDao.adicionar(v1);
     }

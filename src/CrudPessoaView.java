@@ -9,7 +9,7 @@ public class CrudPessoaView {
 
         int id = auxID.gerarID();
         System.out.println("Digite o nome: ");
-        String nome= entrada.next();
+        String nome= entrada.nextLine();
         System.out.println("Digite ano de nascimento: ");
         int ano= entrada.nextInt();
         Pessoa p1 = new Pessoa(id,ano,nome);
@@ -27,7 +27,7 @@ public class CrudPessoaView {
 
         Scanner entrada = new Scanner(System.in);
         System.out.println("Digite o nome: ");
-        String nome= entrada.next();
+        String nome= entrada.nextLine();
         System.out.println("Digite id: ");
         int id= entrada.nextInt();
         System.out.println("Digite ano de nascimento: ");
@@ -39,7 +39,7 @@ public class CrudPessoaView {
 
     static void remover(BancoDao bancoDao){
         Scanner sc = new Scanner(System.in);
-        System.out.println("digite o id a ser removido");
+        System.out.println("digite o id a ser removido" );
         int id = Integer.parseInt(sc.next());
         bancoDao.remover(id);
 
