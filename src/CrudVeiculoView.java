@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class CrudVeiculoView {
 
 
-    static void adicionar(BancoDao bancoDao, AuxID auxID){
+    public static void adicionar(BancoDao bancoDao, AuxID auxID){
 
         Scanner entrada = new Scanner(System.in);
 
@@ -22,13 +22,13 @@ public class CrudVeiculoView {
     }
 
 
-    static void listar(BancoDao bancoDao){
+    public static void listar(BancoDao bancoDao){
         List<Veiculo> dados = bancoDao.listar();
         System.out.println(dados);
 
     }
 
-    static void atualizar(BancoDao bancoDao){
+    public static void atualizar(BancoDao bancoDao){
 
         Scanner entrada = new Scanner(System.in);
         System.out.println("Digite o id: ");
@@ -44,7 +44,7 @@ public class CrudVeiculoView {
 
     }
 
-    static void remover(BancoDao bancoDao){
+    public static void remover(BancoDao bancoDao){
         Scanner sc = new Scanner(System.in);
         System.out.println("digite o id do Veiculo a ser removido");
         int id = Integer.parseInt(sc.next());

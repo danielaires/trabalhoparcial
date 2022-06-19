@@ -10,12 +10,12 @@ public class BancoDao {
         this.banco = b.getLista();
     }
 
-    static void adicionar(Object o) {
+    public static void adicionar(Object o) {
 
         banco.add(o);
     }
 
-    static void remover(int i) {
+    public static void remover(int i) {
 
 //        for (int i = 0; i < banco.size(); i++) {
 //            if (o instanceof Pessoa) {
@@ -56,7 +56,7 @@ public class BancoDao {
         banco.remove(i);
     }
 
-    static void alterar(Object o) {
+    public static void alterar(Object o) {
 
         for (int i = 0; i < banco.size(); i++) {
 
@@ -100,7 +100,7 @@ public class BancoDao {
         }
     }//method
 
-    static List listar() {
+    public static List listar() {
         Object o = null;
         List dados = new ArrayList();
         for (int i = 0; i < banco.size(); i++) {

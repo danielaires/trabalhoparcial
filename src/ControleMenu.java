@@ -89,25 +89,9 @@ public class ControleMenu {
                                 break;
                         }
                     } while (opcao != 5);
-//                case 4:
-//                    do {
-//                        opcao = Menu.menuVendedor();
-//                        switch (opcao) {
-//                            case 1:
-//
-//                        }
-//                        System.out.print("Saindo ");
-//                        for (int i = 10; i > 0; i--) {
-//                            Thread.sleep(180);
-//                            System.out.print(".");
-//                        }
-//                        System.exit(0);
-//                        default:
-//                            System.out.println("Digite uma entrada válida! ");
-//                    } while (opcao != 5);
             }
 
-        }while (true);
+        }while(true);
 
     }//class
 }
