@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
+
 
 public class BancoDao {
     private static List banco;
@@ -97,6 +97,22 @@ public class BancoDao {
                 }
 
             }
+
+            if (o instanceof Vendedor) {
+                Vendedor novo = (Vendedor) o;
+                Vendedor velho = (Vendedor) banco.get(i);
+
+                if (novo.equals(velho)) {
+
+                    velho.setNome(novo.getNome());
+                    velho.setValorHora(novo.getValorHora());
+                    velho.setQtdHora(novo.getQtdHora());
+                    velho.setComissao(novo.getComissao());
+
+                }
+
+            }
+
         }
     }//method
 
@@ -119,7 +135,13 @@ public class BancoDao {
 
             if (o instanceof RegistroAluguel) {
 
-               dados.add(o);
+                dados.add(o);
+
+            }
+
+            if (o instanceof Vendedor) {
+
+                dados.add(o);
 
             }
         }//for

@@ -89,6 +89,29 @@ public class ControleMenu {
                                 break;
                         }
                     } while (opcao != 5);
+                    break;
+
+                case 4:
+                    do {
+                        opcao = Menu.menuVendedor();
+                        switch (opcao) {
+                            case 1:
+                                CrudVendedorView.adicionar(bancoDao, auxID);
+                                opcao = Menu.menu();
+                                break;
+                            case 2:
+                                CrudVendedorView.atualizar(bancoDao, auxID);
+                                opcao = Menu.menu();
+                                break;
+                            case 3:
+                                CrudVendedorView.remover(bancoDao);
+                                opcao = Menu.menu();
+                                break;
+                            case 4:
+                                CrudVendedorView.listar(bancoDao);
+                                break;
+                        }
+                    } while (opcao != 5);
             }
 
         }while(true);
