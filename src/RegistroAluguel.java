@@ -127,7 +127,7 @@ public class RegistroAluguel {
     }
 
     public double calcularAluguel() {
-        descobrirtipo();
+        //descobrirtipo();
         return valorHora * qtdTempo * valorTipo;
 
     }
