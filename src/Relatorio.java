@@ -4,7 +4,7 @@ public class Relatorio {
 
     public double calcularAluguel() {
 
-        List dados = BancoDao.listar();
+        List dados = BancoDao.listaRegistro();
         double soma = 0;
         double aluguel = 0;
 
@@ -20,7 +20,7 @@ public class Relatorio {
 
     public void nomeVendedor() {
 
-        List dados = BancoDao.listar();
+        List dados = BancoDao.listaRegistro();
         double v1 = 0, maior = 0;
         String nome = null;
 
@@ -42,7 +42,7 @@ public class Relatorio {
 
     public void carroAlugado() {
 
-        List dados = BancoDao.listar();
+        List dados = BancoDao.listaRegistro();
         Veiculo v;
         Veiculo v2;
         Veiculo repete = null;

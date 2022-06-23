@@ -3,7 +3,7 @@ import java.util.List;
 
 
 public class BancoDao {
-    private static List banco;
+    private static List banco = new ArrayList();
 
     public BancoDao(Banco b) {
 
@@ -116,39 +116,48 @@ public class BancoDao {
         }
     }//method
 
-    public static List listar() {
-        Object o = null;
-        List dados = new ArrayList();
-        for (int i = 0; i < banco.size(); i++) {
-            o = banco.get(i);
-
-            if (o instanceof Pessoa) {
-
-                dados.add(o);
-
+    public static List<Pessoa> listaPessoa() {
+        List<Pessoa> lista = new ArrayList();
+        for (Object registro : banco) {
+            if (registro instanceof Pessoa) {
+                lista.add((Pessoa) registro);
             }
+        }
+        return lista;
+    }
 
-            if (o instanceof Veiculo) {
-
-                dados.add(o);
+    public static List<Veiculo> listaVeiculo() {
+        List<Veiculo> lista = new ArrayList();
+        for (Object registro : banco) {
+            if (registro instanceof Veiculo) {
+                lista.add((Veiculo) registro);
             }
+        }
+        return lista;
+    }
 
-            if (o instanceof RegistroAluguel) {
-
-                dados.add(o);
-
+    public static List<RegistroAluguel> listaRegistro() {
+        List<RegistroAluguel> lista = new ArrayList();
+        for (Object registro : banco) {
+            if (registro instanceof RegistroAluguel) {
+                lista.add((RegistroAluguel) registro);
             }
+        }
+        return lista;
+    }
 
-            if (o instanceof Vendedor) {
 
-                dados.add(o);
-
+    public static List<Vendedor> listaVendedor() {
+        List<Vendedor> lista = new ArrayList();
+        for (Object registro : banco) {
+            if (registro instanceof Vendedor) {
+                lista.add((Vendedor) registro);
             }
-        }//for
+        }
+        return lista;
+    }
 
-        return dados;
-
-    }//method
 }
+
 
 

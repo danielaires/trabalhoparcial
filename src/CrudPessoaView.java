@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.Scanner;
 import java.util.List;
 
@@ -17,7 +16,7 @@ public class CrudPessoaView {
     }
 
     public static void listar(BancoDao bancoDao){
-        List<Pessoa> dados = bancoDao.listar();
+        List<RegistroAluguel> dados = bancoDao.listaRegistro();
         System.out.println(dados);
 
     }

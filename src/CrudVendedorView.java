@@ -18,12 +18,12 @@ public class CrudVendedorView {
         int qtd= entrada.nextInt();
         System.out.println("Digite a comissao: ");
         int comissao = entrada.nextInt();
-        Vendedor v1 = new Vendedor(id,ano,nome,valor,qtd,comissao);
+        Vendedor v1 = new Vendedor(id,ano,nome);
         bancoDao.adicionar(v1);
     }
 
     public static void listar(BancoDao bancoDao){
-        List<Vendedor> dados = bancoDao.listar();
+        List<RegistroAluguel> dados = bancoDao.listaRegistro();
         System.out.println(dados);
 
     }
@@ -42,7 +42,7 @@ public class CrudVendedorView {
         int qtd= entrada.nextInt();
         System.out.println("Digite a comissao: ");
         int comissao = entrada.nextInt();
-        Vendedor v1 = new Vendedor(id,ano,nome,valor,qtd,comissao);
+        Vendedor v1 = new Vendedor(id,ano,nome);
         bancoDao.alterar(v1);
 
     }

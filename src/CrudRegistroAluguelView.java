@@ -19,7 +19,7 @@ public class CrudRegistroAluguelView {
         double qtd = entrada.nextDouble();
         System.out.println("Digite o valor do tipo de veiculo: ");
         double tipo = entrada.nextDouble();
-        List lista = BancoDao.listar();
+        List lista = BancoDao.listaRegistro();
 
         System.out.println("Digite id da pessoa selecionada: ");
         for (int i = 0; i < lista.size(); i++) {
@@ -52,7 +52,7 @@ public class CrudRegistroAluguelView {
     }
 
     public static void listar(BancoDao bancoDao) {
-        List<RegistroAluguel> dados = bancoDao.listar();
+        List<RegistroAluguel> dados = bancoDao.listaRegistro();
         System.out.println(dados);
 
     }

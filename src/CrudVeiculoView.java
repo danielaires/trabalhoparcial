@@ -23,7 +23,7 @@ public class CrudVeiculoView {
 
 
     public static void listar(BancoDao bancoDao){
-        List<Veiculo> dados = bancoDao.listar();
+        List<RegistroAluguel> dados = bancoDao.listaRegistro();
         System.out.println(dados);
 
     }

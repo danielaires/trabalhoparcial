@@ -6,7 +6,7 @@ public class Vendedor extends Pessoa {
     private int qtdHora;
     private int comissao;
 
-    public Vendedor(int id, int anoNascimento, String nome, double valorHora, int qtdHora, int comissao) {
+    public Vendedor(int id, int anoNascimento, String nome) {
         super(id, anoNascimento, nome);
         this.valorHora = valorHora;
         this.qtdHora = qtdHora;
